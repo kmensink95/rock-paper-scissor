@@ -1,9 +1,10 @@
 @import 'variables';
-@mixin  font-face($size, $color, $font: $primary-font, $weight: normal, $line-height: normal) {
+@mixin  font-face($size, $color, $font: $primary-font, $transform: normal, $weight: normal, $line-height: normal) {
     font-size: $size;
     color: $color;
     font-family: $font;
     font-weight: $weight;
+    text-transform: $transform;
     line-height: $line-height;
     
 }
