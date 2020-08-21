@@ -1,0 +1,40 @@
+@import 'variables';
+
+.page-container {
+    background: linear-gradient($primary-bg, $secondary-bg);
+    height: 100vh;
+    overflow: auto;
+    font-family: $primary-font;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $white;
+}
+
+.header {
+    border: 2px solid #606e85;
+    border-radius: 8px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+        width: 30px;
+        line-height: 1em;
+        font-size: 1.2em;
+    }
+
+    &__score {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $white;
+        padding: 5px 0;
+        border-radius: 8px;
+        font-size: 1em;
+    }
+
+}
