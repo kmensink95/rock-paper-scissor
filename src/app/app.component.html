@@ -2,7 +2,7 @@
   <div class="page__container">
     <header class="header">
       <h1 class="header__title">Rock Paper Scissor</h1>
-      <div class="header__score">Score <span class="header__score--counter">12</span></div>
+      <div class="header__score">Score <span class="header__score--counter">{{ score }}</span></div>
     </header>
     <main class="main">
       <section class="pick-item" *ngIf="!choice">
@@ -17,11 +17,12 @@
             <p class="result__text">You picked</p>
           </section>
           <section class="result__button-container">
-            <app-button pick="scissor"></app-button>
+            <app-button [pick]="AIchoice"></app-button>
             <p class="result__text">The house picked</p>
           </section>
         </div>
-        <h2 class="result">You Lose!</h2>
+        <h2 class="result" *ngIf="!result()">You Lose!</h2>
+        <h2 class="result" *ngIf="result()">You Win!</h2>
         <button class="result__button" (click)="choice = ''">Try again</button>
       </section>
     </main>
