@@ -86,7 +86,43 @@
     border-radius: 4px;
     color: $white;
     cursor: pointer;
-    margin-top: 4rem;
+    margin-top: 2rem;
     padding: .8rem 0;
     text-transform: uppercase;
+}
+
+.result {
+    text-align: center;
+    margin-top: 2rem;
+    color: $white;
+    font-size: 2em;
+
+    &__buttons-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1rem;
+    }
+
+    &__text {
+        margin-top: .5rem;
+        color: $white;
+    }
+
+    &__button {
+        display: block;
+        width: 50%;
+        border-radius: 4px;
+        padding: 1rem 0;
+        background: $white;
+        outline: 0;
+        margin: 2rem auto 0;
+        font-size: 1em;
+    }
 }

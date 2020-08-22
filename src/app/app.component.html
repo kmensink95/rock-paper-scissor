@@ -11,8 +11,18 @@
         <app-button pick="rock" (picked)="choosen($event)" class="rock"></app-button>
       </section>
       <section class="pick-result" *ngIf="!!choice">
-        <h1>result</h1>
-
+        <div class="result__buttons-container">
+          <section class="result__button-container result__button-container--you-picked">
+            <app-button [pick]="choice"></app-button>
+            <p class="result__text">You picked</p>
+          </section>
+          <section class="result__button-container">
+            <app-button pick="scissor"></app-button>
+            <p class="result__text">The house picked</p>
+          </section>
+        </div>
+        <h2 class="result">You Lose!</h2>
+        <button class="result__button" (click)="choice = ''">Try again</button>
       </section>
     </main>
     <button class="rules">Rules</button>
