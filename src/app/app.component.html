@@ -21,8 +21,8 @@
             <p class="result__text">The house picked</p>
           </section>
         </div>
-        <h2 class="result" *ngIf="!result()">You Lose!</h2>
-        <h2 class="result" *ngIf="result()">You Win!</h2>
+        <h2 class="result" *ngIf="win === false">You Lose!</h2>
+        <h2 class="result" *ngIf="win === true">You Win!</h2>
         <button class="result__button" (click)="choice = ''">Try again</button>
       </section>
     </main>

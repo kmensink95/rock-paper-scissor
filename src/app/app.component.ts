@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   choices = ['rock', 'paper', 'scissor'];
   AIchoice = '';
   score = 0;
+  win: boolean;
 
   constructor(){}
 
@@ -27,7 +28,44 @@ export class AppComponent implements OnInit {
     this.result();
   }
 
-  result(): boolean {
-    return false;
+  result(): void {
+    switch (this.choice) {
+      case 'paper':
+        if (this.AIchoice === 'scissor') {
+          this.win = false;
+        }
+        if (this.AIchoice === 'rock') {
+          this.score++;
+          this.win = true;
+        }
+        if (this.AIchoice === this.choice) {
+          this.win = false;
+        }
+      break;
+      case 'rock':
+        if (this.AIchoice === 'scissor') {
+          this.score++;
+          this.win = true;
+        }
+        if (this.AIchoice === 'paper') {
+          this.win = false;
+        }
+        if (this.AIchoice === this.choice) {
+          this.win = false;
+        }
+      break;
+      case 'scissor':
+        if (this.AIchoice === 'paper') {
+          this.score++;
+          this.win = true;
+        }
+        if (this.AIchoice === 'rock') {
+          this.win =  false;
+        }
+        if (this.AIchoice === this.choice) {
+          this.win =  false;
+        }
+      break;
+    }
   }
 }
