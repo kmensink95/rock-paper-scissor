@@ -51,17 +51,35 @@
     }
 }
 
-.buttons {
+.main {
     background: yellow;
-    width: 100%;
-
-    &__button {
-
-    }
+    display: flex;
 }
 
+.pick-item {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "paper . scissor"
+                         ". rock .";
+}
+
+.paper {
+    grid-area: paper;
+}
+
+.scissor {
+    grid-area: scissor;
+}
+
+.rock {
+    grid-area: rock;
+    margin-top: 2rem;
+}
+
+
 .rules {
-    width: 50%;
+    width: 30%;
     margin: 0 auto;
     font-size: 1.2em;
     background: 0;
@@ -71,5 +89,4 @@
     cursor: pointer;
     margin-top: 4rem;
     padding: .8rem 0;
-    
 }

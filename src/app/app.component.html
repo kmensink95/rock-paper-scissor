@@ -4,17 +4,13 @@
       <h1 class="header__title">Rock Paper Scissor</h1>
       <div class="header__score">Score <span class="header__score--counter">12</span></div>
     </header>
-    <section class="buttons">
-        <button class="buttons__button">
-          <img src="../assets/icons/paper.svg">
-        </button>
-        <button class="buttons__button buttons__button--rock">
-          <img src="../assets/icons/rock.svg">
-        </button>
-        <button class="buttons__button buttons__button--scissor">
-          <img src="../assets/icons/scissor.svg">
-        </button>
+    <main class="main">
+      <section class="pick-item">
+        <app-button pick="paper" class="paper"></app-button>
+        <app-button pick="scissor" class="scissor"></app-button>
+        <app-button pick="rock" class="rock"></app-button>
       </section>
-      <button class="rules">Rules</button>
+    </main>
+    <button class="rules">Rules</button>
   </div>
 </div>
