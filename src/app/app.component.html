@@ -5,10 +5,14 @@
       <div class="header__score">Score <span class="header__score--counter">12</span></div>
     </header>
     <main class="main">
-      <section class="pick-item">
-        <app-button pick="paper" class="paper"></app-button>
-        <app-button pick="scissor" class="scissor"></app-button>
-        <app-button pick="rock" class="rock"></app-button>
+      <section class="pick-item" *ngIf="!choice">
+        <app-button pick="paper" (picked)="choosen($event)" class="paper"></app-button>
+        <app-button pick="scissor" (picked)="choosen($event)" class="scissor"></app-button>
+        <app-button pick="rock" (picked)="choosen($event)" class="rock"></app-button>
+      </section>
+      <section class="pick-result" *ngIf="!!choice">
+        <h1>result</h1>
+
       </section>
     </main>
     <button class="rules">Rules</button>

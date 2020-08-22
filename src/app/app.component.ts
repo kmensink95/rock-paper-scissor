@@ -13,4 +13,9 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+  choosen(choice: string): void {
+    console.log(choice);
+    this.choice = choice;
+  }
 }
