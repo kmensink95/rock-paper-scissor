@@ -6,84 +6,69 @@
     height: 100vh;
 
     &__container {
-        overflow: auto;
-        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 2rem;
+        max-width: 1000px;
         margin: 0 auto;
     }
 }
 
 .header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 70%;
-    margin: 2em auto 0;
-    border: 2px solid #606e85;
-    border-radius: 8px;
-    padding: 10px 30px;
+    align-items: center;
+    border: 3px solid $primary-border;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    font-family: $primary-font;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-bottom: 4rem;
 
     &__title {
-        @include font-face(1.2em, $white, $primary-font, uppercase, 600, 1em);
-
         width: 30px;
+        font-size: 1.2em;
+        color: $white;
     }
 
     &__score {
-        @include font-face(.8em, $paper, $primary-font, uppercase, 600);
-
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         background: $white;
-        height: 100%;
-        padding: .5rem .8rem;
+        padding: .8rem .4rem;
+        font-size: .9em;
         border-radius: 4px;
-        opacity: .9;
 
         &--counter {
-            font-size: 2.3em;
+            margin-top: .3rem;
+            font-size: 1.5em;
         }
     }
-
 }
 
-
 .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 5em auto;
-    width: 70%;
+    background: yellow;
+    width: 100%;
 
     &__button {
-        cursor: pointer;
-        margin: 5%;
-        width: 6.5rem;
-        height: 6.5rem;
-        border-radius: 50%;
-        outline: 0;
-        border: 5px solid $paper;
 
-        &--rock {
-            border: 5px solid $rock;
-        }
-
-        &--scissor {
-            border: 5px solid $scissor;
-        }
     }
 }
 
 .rules {
     width: 50%;
-    display: block;
     margin: 0 auto;
+    font-size: 1.2em;
     background: 0;
-    border: 1px solid $white;
+    border: 2px solid $primary-border;
+    border-radius: 4px;
     color: $white;
-    font-size: 2em;
-    padding: .5em 0;
-    text-transform: uppercase;
     cursor: pointer;
+    margin-top: 4rem;
+    padding: .8rem 0;
 }
