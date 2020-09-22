@@ -6,5 +6,13 @@
     border-radius: 50%;
     outline: 0;
     cursor: pointer;
-    border: .5rem solid green;
+    border: .5rem solid $yellow;
+
+    &--blue {
+        border-color: $red;
+    }
+
+    &--red {
+        border-color: $blue;
+    }
 }

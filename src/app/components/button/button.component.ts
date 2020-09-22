@@ -18,6 +18,20 @@ export class ButtonComponent implements OnInit {
     this.picked.emit(pick);
   }
 
+  getColor(): string {
+    switch(this.pick) {
+      case 'paper':
+        return 'button button--blue';
+        break;
+      case 'scissor':
+        return 'button button--red';
+        break;
+      case 'rock':
+        return 'button';
+        break;
+    }
+  }
+
   getUrl(): string {
     return `../../assets/icons/${this.pick}.svg`;
   }
